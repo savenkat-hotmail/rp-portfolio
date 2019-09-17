@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'default'
 
 steps:
 - script: echo Hello, world!
@@ -17,3 +17,6 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: PowerShell@2
+  inputs:
+    filePath: 'D:\code\Lab\realpython-materials\rp-portfolio\run2.ps1'
